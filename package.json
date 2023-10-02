@@ -1,0 +1,33 @@
+{
+  "name": "importer",
+  "author": "David Arenas <davejs136@gmail.com> (https://github.com/Dave136)",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:dev": "rimraf lib && tsup --watch",
+    "build:prod": "rimraf dist && env NODE_ENV=production tsup",
+    "build:watch": "tsup --watch",
+    "lint:format": "prettier --loglevel warn --write \"./**/*.{ts,tsx,css,md,json}\"",
+    "lint": "pnpm lint:format",
+    "prepublishOnly": "pnpm lint && pnpm build:prod"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-node-dev": "^2.0.0",
+    "tsup": "^7.2.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.4"
+  }
+}
