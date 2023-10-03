@@ -12,11 +12,12 @@ export async function importModule(srcCode: string) {
         target: 'es2018',
         parser: {
           syntax: 'typescript',
-        }
+        },
       },
     });
-  
-    const toBase64 = (str: string) => `data:text/javascript;base64,${btoa(str)}`;
+
+    const toBase64 = (str: string) =>
+      `data:text/javascript;base64,${btoa(str)}`;
     const module = await import(toBase64(code));
 
     return module;
@@ -27,7 +28,7 @@ export async function importModule(srcCode: string) {
       transformOptions: {
         loader: 'ts',
         target: 'es2018',
-      }
+      },
     });
 
     return mod;
