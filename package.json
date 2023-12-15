@@ -6,7 +6,13 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "keywords": ["import", "import-string", "utils", "import-from-string"],
   "license": "MIT",
+  "homepage": "https://github.com/Dave136/import-string#import-string",
+  "repository": "https://github.com/Dave136/import-string",
+  "bugs": {
+    "url": "https://github.com/Dave136/import-string/issues"
+  },
   "files": [
     "dist"
   ],
