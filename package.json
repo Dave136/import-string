@@ -1,12 +1,17 @@
 {
   "name": "import-string",
   "author": "David Arenas <davejs136@gmail.com> (https://github.com/Dave136)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "keywords": ["import", "import-string", "utils", "import-from-string"],
+  "keywords": [
+    "import",
+    "import-string",
+    "utils",
+    "import-from-string"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/Dave136/import-string#import-string",
   "repository": "https://github.com/Dave136/import-string",
