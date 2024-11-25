@@ -30,6 +30,7 @@
     "prepublishOnly": "pnpm lint && pnpm build:prod"
   },
   "devDependencies": {
+    "@types/bun": "latest",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
     "ts-node-dev": "^2.0.0",
