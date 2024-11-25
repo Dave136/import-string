@@ -27,14 +27,12 @@
     "build:watch": "tsup --watch",
     "lint:format": "prettier --loglevel warn --write \"./**/*.{ts,tsx,css,md,json}\"",
     "lint": "pnpm lint:format",
-    "prepublishOnly": "pnpm lint && pnpm build:prod",
-    "release": "semantic-release"
+    "prepublishOnly": "pnpm lint && pnpm build:prod"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
-    "semantic-release": "^24.2.0",
     "ts-node-dev": "^2.0.0",
     "tsup": "^7.2.0"
   },

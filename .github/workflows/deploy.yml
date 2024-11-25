@@ -30,8 +30,13 @@ jobs:
       - name: Build
         run: bun run build:prod
 
+      - name: Setup Node.js for release
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: bun run release
+        run: npx semantic-release
