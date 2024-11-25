@@ -1,4 +1,8 @@
-# import-string
+<p align="center">
+  <img src="docs/import-string.svg" alt="import-string logo" width="120" height="140" />
+</p>
+
+<h1 align="center">import-string</h1>
 
 This package allow us to import code from simple string, with support to:
 
@@ -48,6 +52,19 @@ async function main() {
 
   console.log(mod.example().foo); // output -> baz
 }
+```
+
+### 🔧 Options
+
+The `importModule` function accepts an options object as its second parameter:
+
+```typescript
+import { importModule } from 'import-string';
+
+const mod = await importModule(stringSrc, {
+  target: 'es2018',
+  loader: 'ts',
+});
 ```
 
 ### 💻 Development
