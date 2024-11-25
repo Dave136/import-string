@@ -1,17 +1,25 @@
 import { importFromStringSync } from 'module-from-string';
-import { transformSync } from '@swc/wasm';
+import { JscTarget, transformSync } from '@swc/wasm';
 
 const isBun = () => 'Bun' in globalThis;
 const isDeno = () => 'Deno' in globalThis;
 const isNode = () => !isBun() && !isDeno();
 
-export async function importModule(srcCode: string) {
+export interface ImportModuleOptions {
+  target?: JscTarget;
+  loader?: 'ts' | 'js';
+}
+
+export async function importModule(
+  src: string,
+  { target = 'es2018', loader = 'ts' }: ImportModuleOptions,
+) {
   if (isDeno()) {
-    const { code } = transformSync(srcCode, {
+    const { code } = transformSync(src, {
       jsc: {
-        target: 'es2018',
+        target,
         parser: {
-          syntax: 'typescript',
+          syntax: loader === 'ts' ? 'typescript' : 'ecmascript',
         },
       },
     });
@@ -24,10 +32,10 @@ export async function importModule(srcCode: string) {
   }
 
   if (isNode() || isBun()) {
-    const mod = importFromStringSync(srcCode, {
+    const mod = importFromStringSync(src, {
       transformOptions: {
-        loader: 'ts',
-        target: 'es2018',
+        target,
+        loader,
       },
     });
 
