@@ -2,6 +2,21 @@
   <img src="docs/import-string.svg" alt="import-string logo" width="120" height="140" />
 </p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/import-string">
+    <img src="https://img.shields.io/npm/v/import-string.svg" alt="npm version">
+  </a>
+  <a href="https://github.com/Dave136/import-string/actions">
+    <img src="https://github.com/Dave136/import-string/workflows/Deploy/badge.svg" alt="CI">
+  </a>
+  <a href="https://github.com/Dave136/import-string/blob/main/LICENSE">
+    <img src="https://img.shields.io/npm/l/import-string.svg" alt="license">
+  </a>
+  <a href="https://www.npmjs.com/package/import-string">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/import-string">
+  </a>
+</p>
+
 <h1 align="center">import-string</h1>
 
 This package allow us to import code from simple string, with support to:
