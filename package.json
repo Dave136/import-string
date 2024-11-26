@@ -26,8 +26,8 @@
     "build:prod": "rimraf dist && env NODE_ENV=production tsup",
     "build:watch": "tsup --watch",
     "lint:format": "prettier --loglevel warn --write \"./**/*.{ts,tsx,css,md,json}\"",
-    "lint": "pnpm lint:format",
-    "prepublishOnly": "pnpm lint && pnpm build:prod"
+    "lint": "bun lint:format",
+    "prepublishOnly": "bun lint && bun build:prod"
   },
   "devDependencies": {
     "@types/bun": "latest",
